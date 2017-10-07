@@ -1,5 +1,5 @@
 # Magento
-default['magento'] = {
+default['cas_magento'] = {
     domain: 'example.com',
-    docroot: "/var/www/#{node['magento']['domain']}"
+    docroot: "/var/www/#{node['cas_magento']['domain']}"
 }

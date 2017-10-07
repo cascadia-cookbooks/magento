@@ -1,4 +1,4 @@
-default['magento'] = {
+default['cas_magento'] = {
     directories: {
         default: %w(
             releases

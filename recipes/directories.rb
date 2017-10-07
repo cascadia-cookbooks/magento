@@ -5,7 +5,7 @@
 #
 
 # Manage docroot
-directory node['magento']['docroot'] do
+directory node['cas_magento']['docroot'] do
     owner     pass
     group     pass
     mode      pass
@@ -14,8 +14,8 @@ directory node['magento']['docroot'] do
 end
 
 # Manage default directory structure
-node['magento']['directories']['default'].each do |dir|
-    directory "#{node['magento']['docroot']}/#{dir}" do
+node['cas_magento']['directories']['default'].each do |dir|
+    directory "#{node['cas_magento']['docroot']}/#{dir}" do
         owner     pass
         group     pass
         mode      pass
@@ -25,8 +25,8 @@ node['magento']['directories']['default'].each do |dir|
 end
 
 # Manage any user specified domains
-node['magento']['directories']['additional'].each do |dir|
-    directory "#{node['magento']['docroot']}/#{dir}" do
+node['cas_magento']['directories']['additional'].each do |dir|
+    directory "#{node['cas_magento']['docroot']}/#{dir}" do
         owner     pass
         group     pass
         mode      pass
@@ -37,7 +37,7 @@ end
 
 # Manage Vagrant directories if Chef environment is 'development'
 if node.chef_environment == 'development'
-    node['magento']['directories']['vagrant'].each do |dir|
+    node['cas_magento']['directories']['vagrant'].each do |dir|
         directory dir do
             owner     pass
             group     pass
