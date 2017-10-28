@@ -2,7 +2,7 @@ default['cas_magento']['directories'] = {
     docroot: "/var/www/#{node['cas_magento']['domain']}",
     owner: 'root',
     group: 'root',
-    mode: 0644,
+    mode: 0755,
     default: %w(
         releases
         shared
