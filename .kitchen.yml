@@ -13,5 +13,5 @@ platforms:
 suites:
   - name: default
     run_list:
-    - recipe[cas_magento::default]
+      - recipe[cas_magento::default]
     attributes: 
